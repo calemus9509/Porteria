@@ -11,7 +11,6 @@
 <body>
     <div id="app">
         <example></example>
-        <example></example>
     </div>
 </body>
 
