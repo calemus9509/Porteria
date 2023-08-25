@@ -7,16 +7,16 @@ import Example from "@/pages/Example.vue";
 import Pokemon from "@/pages/Pokemon.vue";
 
 const routes = [
-    { path: "/Example", components: Example },
-    { path: "/Pokemon", components: Pokemon },
+    { path: "/Example", component: Example },
+    { path: "/Pokemon", component: Pokemon },
 ];
 
 const router = createRouter({
-    history: createWebHashHistory,
+    history: createWebHashHistory(),
     routes,
 });
 
-const app = createApp({});
+const app = createApp();
 app.use(router);
 app.mount("#app");
 
