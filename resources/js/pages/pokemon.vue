@@ -1,37 +1,41 @@
 <template>
     <div>
         <h1>Pokemon</h1>
+        <Lista @imagen="getImagen"></Lista>
+        <Image :imagen ="urlImagenP"></Image>
+        <Api @fotoIma ="getfot"></Api>
+
+
     </div>
 </template>
 
 <script>
 import Lista from '@/components/LisPokemon.vue'
-import Lista from '@/components/ImagenPokemon.vue'
+import Image from '@/components/ImagenPokemon.vue'
+import Api from '@/components/ApiPhotos.vue'
     export default {
         components:{
             Lista,
-            Imagen
+            Image,
+            Api
         },
         data() {
             return {
-                listaPokemon: []
+                urlImagenP: '',
+                fotoF: '',
             }
         },
         methods: {
-            // pokemons(){
-            //     axios.get('https://pokeapi.co/api/v2/pokemon')
-            //             .then(res => {
-            //                 console.table(res.data.results)
-            //                 this.listPokemon =res.data.results
-            //             })
-            //             .catch(err => {
-            //                 console.error(err); 
-            //             })
-            // }
+            getImagen(data){
+                this.urlImagenP = data
+            },
+
+            getfot(){
+                this.fotoF
+            }
+
         },
-        mounted() {
-            // this.pokemons()
-        },
+     
     }
 </script>
 
