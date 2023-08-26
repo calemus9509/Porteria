@@ -17,10 +17,11 @@
         </ul>
         <component :is="selectedComponent"></component> -->
 
-        <<router-link to="/Example">Example</router-link>
-            <<router-link to="/Pokemon">Pokemon</router-link>
+        <router-link to="/Example">Example</router-link>
+        <br>
+        <router-link to="/Pokemon">Pokemon</router-link>
 
-                <router-view></router-view>
+        <router-view></router-view>
 
     </div>
 </body>
